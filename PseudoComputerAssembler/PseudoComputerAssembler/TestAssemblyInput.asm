@@ -1,0 +1,45 @@
+; Test stripping entire line
+
+; jump to memory :D
+GOTO START
+
+LET PORTA h01
+LET RECEIVE_BIT 1
+
+START: ; this is the start tag
+  LOADLITERAL 2 ; this should
+  STORE h01     ; also get stripped
+  LOADLITERAL 3 ; 
+  STORE PORTA   ; PortA should now be 3
+  
+  LOADSTATUS
+  LOADALU1
+  LOADLITERAL RECEIVE_BIT
+  LOADALU2
+  BITAND
+  
+  LOADLITERAL 7
+  LOADALU1
+  LOADLITERAL 12
+  LOADALU2
+  ADD
+  
+  STORE h5
+  
+  LOADSUP1LO 1
+  LOADSUP1LOMID 0
+  LOADSUP1HIMID 0
+  LOADSUP1HI 0
+  
+  LOADSUP2LO 1
+  LOADSUP2LOMID 0
+  LOADSUP2HIMID 0
+  LOADSUP2HI 0
+  
+  ADDSUP
+  STORESUPLO PORTA
+  
+GOTO START  
+  
+  ;; ;; ; ;; ; ; 
+  ; test ;

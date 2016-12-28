@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Core\Instruction.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="PreProcessor\MetaDriver.cpp">
+      <Filter>PreProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\AsmToVerilog.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="PreProcessor">
+      <UniqueIdentifier>{0c83da7d-282c-4da5-ad96-6bd0337ea3f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{c745aeb7-b880-45b3-b99a-a5794a441570}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Defs.hpp" />
+    <ClInclude Include="Core\Instruction.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="PreProcessor\MetaDriver.hpp">
+      <Filter>PreProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\AsmToVerilog.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.hpp" />
+  </ItemGroup>
+</Project>
